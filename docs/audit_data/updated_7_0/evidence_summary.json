@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "claim_boundary": "Retrospective computational diagnostics, not independent biological validation. Training-median flags are relative reference checks, not efficacy thresholds. Packaging residual bounds do not establish a per-candidate success probability.",
+  "candidate_selection_changed": false,
+  "model_retrained": false,
+  "shortlist_rows": 30,
+  "both_cns_training_medians": 24,
+  "strict_conservative_rows": 7,
+  "score_component_medians": {
+    "cns": 0.05633550675,
+    "liver": 0.07338461375,
+    "off_target": 0.0535847938
+  },
+  "score_component_medians_note": "Medians of terms need not sum to median score.",
+  "external_rows": 28,
+  "external_packaging_counts": {
+    "passes_packaging_point_gate": 17,
+    "passes_packaging_lcb90_gate": 2,
+    "passes_packaging_gate": 0
+  },
+  "external_packaging_interpretation": "Exclusion of published capsids under a different task; not a measured in-domain false-negative rate.",
+  "aav_f_vs_s": {
+    "status": "direction_check_failed",
+    "f_minus_s": {
+      "brain": -0.07508705,
+      "spinal_cord": 0.001994250000000003,
+      "liver": -0.07775029999999994
+    },
+    "brain_direction_pass": false,
+    "spinal_cord_direction_pass": true,
+    "independent_validation": false,
+    "retrospective": true,
+    "uncertainty_of_paired_difference": "not_available_from_saved_means"
+  },
+  "cns_tropism_validated": false,
+  "input_sha256": {
+    "docs/audit_data/virtual_screen_shortlist.csv": "3b499327a2a2ebb08f3a987fbd030c9e8d030cb8025bdbce03034c3606136210",
+    "docs/audit_data/virtual_screen_summary.json": "d0f8ec7ffa89602cc49d786c6da8b61f4370685e29ab082a227333fb002d79ab",
+    "artifacts/literature_7mers/scores_with_organs.csv": "95405a3abd70cbede1146ac50b00ceccc68c003189de1ceae02b6b56c1ca2c06"
+  },
+  "output_sha256": {
+    "endpoint_summary.csv": "3b9e5043bafaedcefcda10bd67f70456fb37b8136acaf76baa16fe1fb11254f0",
+    "external_endpoint_report.csv": "59be735b6fe58eaf5fe74b62bfd4ac136f1d6128920f0fac452668d4a01ea5f3"
+  }
+}

@@ -1,0 +1,60 @@
+project:
+  random_seed: 42
+  peptide_length: 7
+  insertion_site_note: "AAV9 (K449R), 7-mer inserted between VP1 residues 588 and 589."
+
+targets:
+  packaging: f_pack
+  cns:
+    # Previously evaluated baseline. Alternative weights are a screening hypothesis.
+    brain_mouse: 0.5
+    spinal_cord_mouse: 0.5
+  liver: liver_mouse
+  off_target:
+    heart_mouse: 0.5
+    kidney_mouse: 0.5
+  annotation_only:
+    - liver_human
+    - immune_footprint_risk
+
+screening:
+  # Must be estimated from training data; deliberately left unset.
+  packaging_threshold: null
+  score_weights:
+    cns: 0.45
+    liver: 0.35
+    off_target: 0.20
+  weight_sensitivity_delta: 0.10
+  weight_sensitivity_scenarios: 27
+  virtual_pool_size: 1000000
+  packaging_lower_bound_coverage: 0.95
+  shortlist_quality_quantile: 0.95
+  minimum_training_hamming_distance: 2
+  minimum_shortlist_pairwise_hamming_distance: 3
+  final_candidate_count:
+    minimum: 24
+    maximum: 30
+  alternative_sma_target_weights:
+    brain_mouse: 0.30
+    spinal_cord_mouse: 0.70
+  sequential_strategy:
+    status: comparison_only_not_promoted
+    # Applied after packaging and training-distance gates. Each fraction is
+    # evaluated among survivors from the preceding stage and can be tuned
+    # without retraining the organ-prediction model.
+    organ_order:
+      - spinal_cord_mouse
+      - brain_mouse
+      - liver_mouse
+      - heart_mouse
+      - kidney_mouse
+    retain_fraction:
+      spinal_cord_mouse: 0.25
+      brain_mouse: 0.50
+      liver_mouse: 0.50
+      heart_mouse: 0.75
+      kidney_mouse: 0.75
+
+validation:
+  split_strategy: sequence_cluster
+  primate_data_role: blind_test_only

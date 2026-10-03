@@ -1,0 +1,40 @@
+{
+  "mode": "score_external_peptides",
+  "n_rows": 28,
+  "n_unique_7mers": 27,
+  "organs_scored": false,
+  "sanity_check_only": true,
+  "claim_boundary": "Literature / external peptide scores are a directional sanity check only; they do not validate the model or replace wet-lab evidence.",
+  "packaging_95": {
+    "model": "ridge",
+    "split": "distance-2-sequence-calibration",
+    "train_rows": 78219,
+    "calibration_rows": 19883,
+    "pearson_r": 0.65442989355086,
+    "r2": 0.4281143011994486,
+    "mae": 1.0470980905244789,
+    "lower_bound_target_coverage": 0.95,
+    "lower_bound_empirical_coverage": 0.9500075441331791,
+    "lower_bound_offset": 2.5503787498840333,
+    "packaging_threshold": -0.769888015,
+    "threshold_definition": "median observed Production2"
+  },
+  "packaging_90": {
+    "model": "ridge",
+    "split": "distance-2-sequence-calibration",
+    "train_rows": 78219,
+    "calibration_rows": 19883,
+    "pearson_r": 0.65442989355086,
+    "r2": 0.4281143011994486,
+    "mae": 1.0470980905244789,
+    "lower_bound_target_coverage": 0.9,
+    "lower_bound_empirical_coverage": 0.9000150882663582,
+    "lower_bound_offset": 1.7240332239944456,
+    "packaging_threshold": -0.769888015,
+    "threshold_definition": "median observed Production2"
+  },
+  "packaging_threshold": -0.769888015,
+  "lower_bound_offset_95": 2.5503787498840333,
+  "lower_bound_offset_90": 1.7240332239944456,
+  "organ_status": "skipped_missing_reconstructed_table"
+}

@@ -1,0 +1,60 @@
+{
+  "mode": "producible_prior_sampling",
+  "note": "Does not replace screen-virtual or the primary 95% LCB shortlist funnel. Resampling uses a point-estimate producible prior.",
+  "random_state": 42,
+  "pool_size": 50000,
+  "resample_size": 5000,
+  "producible_rule": "point_median",
+  "observed_sequences_excluded": 100000,
+  "producible_pool_rows": 11978,
+  "producible_fraction": 0.23956,
+  "packaging_95": {
+    "model": "ridge",
+    "split": "distance-2-sequence-calibration",
+    "train_rows": 78219,
+    "calibration_rows": 19883,
+    "pearson_r": 0.65442989355086,
+    "r2": 0.4281143011994486,
+    "mae": 1.0470980905244789,
+    "lower_bound_target_coverage": 0.95,
+    "lower_bound_empirical_coverage": 0.9500075441331791,
+    "lower_bound_offset": 2.5503787498840333,
+    "packaging_threshold": -0.769888015,
+    "threshold_definition": "median observed Production2"
+  },
+  "packaging_90": {
+    "model": "ridge",
+    "split": "distance-2-sequence-calibration",
+    "train_rows": 78219,
+    "calibration_rows": 19883,
+    "pearson_r": 0.65442989355086,
+    "r2": 0.4281143011994486,
+    "mae": 1.0470980905244789,
+    "lower_bound_target_coverage": 0.9,
+    "lower_bound_empirical_coverage": 0.9000150882663582,
+    "lower_bound_offset": 1.7240332239944456,
+    "packaging_threshold": -0.769888015,
+    "threshold_definition": "median observed Production2"
+  },
+  "packaging_threshold": -0.769888015,
+  "lower_bound_offset_95": 2.5503787498840333,
+  "lower_bound_offset_90": 1.7240332239944456,
+  "organs_scored": true,
+  "human_liver_warning_threshold": -0.3450046877930836,
+  "organ_ensemble": {
+    "architecture": "shared_mlp_64_32",
+    "members": 5,
+    "train_rows": 92725,
+    "iterations": [
+      33,
+      30,
+      29,
+      37,
+      27
+    ]
+  },
+  "packaging_gate_passed_95_lcb": 127,
+  "packaging_gate_passed_90_lcb": 583,
+  "packaging_gate_passed_point": 5000,
+  "shortlist_rows": 7
+}

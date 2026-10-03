@@ -1,0 +1,86 @@
+{
+  "record_type": "retrospective_recovery_not_contemporaneous_training_log",
+  "historical_model_id": "updated-5.0-frozen-baseline",
+  "baseline_code_revision": "0ba7f09",
+  "shortlist_artifact_revision": "b34b01776d70ede1fbbd77598ca84f12515e79ed",
+  "exact_historical_training_commit": null,
+  "evidence_sources": {
+    "docs/audit_data/virtual_screen_shortlist.csv": "3b499327a2a2ebb08f3a987fbd030c9e8d030cb8025bdbce03034c3606136210",
+    "docs/audit_data/virtual_screen_summary.json": "d0f8ec7ffa89602cc49d786c6da8b61f4370685e29ab082a227333fb002d79ab"
+  },
+  "input_manifest_sha256": "7a94ccb1e541dfa47df60206e7daef64e597ad18c4e9590532d392fc55758174",
+  "upstream": {
+    "fit4function": {
+      "repository": "https://github.com/vector-engineering/fit4function.git",
+      "commit": "6bfc2ebfe4abcd45cc6fe737e4700242a5090fee",
+      "retrieved": "2026-09-18"
+    },
+    "note": "Update this manifest only after re-auditing the upstream release and its derived labels."
+  },
+  "random_state": 42,
+  "member_seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "organ_fit": {
+    "architecture": "shared_mlp_64_32",
+    "members": 5,
+    "train_rows": 92725,
+    "iterations": [
+      33,
+      30,
+      29,
+      37,
+      27
+    ]
+  },
+  "packaging_fit": {
+    "model": "ridge",
+    "split": "distance-2-sequence-calibration",
+    "train_rows": 78219,
+    "calibration_rows": 19883,
+    "pearson_r": 0.65442989355086,
+    "r2": 0.4281143011994486,
+    "mae": 1.0470980905244789,
+    "lower_bound_target_coverage": 0.95,
+    "lower_bound_empirical_coverage": 0.9500075441331791,
+    "lower_bound_offset": 2.5503787498840333,
+    "packaging_threshold": -0.769888015,
+    "threshold_definition": "median observed Production2"
+  },
+  "observations_recomputed_at_audit": {
+    "brain": {
+      "observed_rows": 94680,
+      "missing_rows": 5320
+    },
+    "spinal_cord": {
+      "observed_rows": 96398,
+      "missing_rows": 3602
+    },
+    "liver": {
+      "observed_rows": 97311,
+      "missing_rows": 2689
+    },
+    "heart": {
+      "observed_rows": 97920,
+      "missing_rows": 2080
+    },
+    "kidney": {
+      "observed_rows": 98138,
+      "missing_rows": 1862
+    },
+    "complete_case_rows": 92725
+  },
+  "missing_label_policy": "complete cases across five standardized organ targets",
+  "historical_training_wall_seconds": null,
+  "historical_hardware": null,
+  "historical_dependency_versions": null,
+  "member_stopping_reasons": null,
+  "weights_sha256": null,
+  "unavailable_reason": "Historical weights and contemporaneous execution metadata not retained",
+  "training_recipe": "docs/FIT4FUNCTION_RUNBOOK.md",
+  "new_training_executed": false
+}

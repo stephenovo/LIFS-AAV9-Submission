@@ -1,0 +1,26 @@
+.DS_Store
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+tmp/
+.coverage
+htmlcov/
+build/
+dist/
+submission_packages/
+*.egg-info/
+
+# Raw/derived research data and trained artifacts are not committed by default.
+data/raw/*
+!data/raw/.gitkeep
+data/interim/*
+!data/interim/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+artifacts/*
+!artifacts/.gitkeep
+
+# Notebook runtime files
+.ipynb_checkpoints/

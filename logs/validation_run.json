@@ -1,0 +1,30 @@
+{
+  "activity": "software_verification_and_synthetic_demo_not_biological_validation",
+  "source_commit": "ab66a5983ce995d11475d73a95f9faae3a754189",
+  "runs": [
+    {
+      "command": ".venv/bin/ruff check .",
+      "started_utc": "2026-09-29T03:58:05.247597+00:00",
+      "wall_seconds": 0.010658707993570715,
+      "exit_status": 0,
+      "stdout": "All checks passed!\n",
+      "stderr": ""
+    },
+    {
+      "command": ".venv/bin/python -m pytest",
+      "started_utc": "2026-09-29T03:58:05.258402+00:00",
+      "wall_seconds": 1.5763334590010345,
+      "exit_status": 0,
+      "stdout": ".....................................................................    [100%]\n=============================== warnings summary ===============================\ntests/test_motor_neuron.py::test_fits_motor_neuron_head_and_predicts_new_variants\n  <repo>/src/aav9_sma/models/metrics.py:29: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.\n    \"spearman_r\": float(spearmanr(targets, predictions).statistic),\n\ntests/test_multiorgan_evaluate.py: 9 warnings\ntests/test_producible_prior.py: 2 warnings\n  <repo>/.venv/lib/python3.12/site-packages/sklearn/neural_network/_multilayer_perceptron.py:695: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped\n    warnings.warn(\n\ntests/test_multiorgan_evaluate.py::test_multitask_benchmark_returns_one_row_per_endpoint\ntests/test_multiorgan_evaluate.py::test_leave_one_animal_out_audits_every_animal\ntests/test_multiorgan_evaluate.py::test_leave_one_animal_out_audits_every_animal\ntests/test_multiorgan_evaluate.py::test_leave_one_animal_out_audits_every_animal\ntests/test_multiorgan_evaluate.py::test_leave_one_animal_out_audits_every_animal\ntests/test_multiorgan_evaluate.py::test_leave_one_animal_out_audits_every_animal\ntests/test_multiorgan_evaluate.py::test_leave_one_animal_out_audits_every_animal\ntests/test_multiorgan_evaluate.py::test_leave_one_animal_out_audits_every_animal\ntests/test_multiorgan_evaluate.py::test_leave_one_animal_out_audits_every_animal\n  <repo>/.venv/lib/python3.12/site-packages/sklearn/neural_network/_multilayer_perceptron.py:785: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (8) reached and the optimization hasn't converged yet.\n    warnings.warn(\n\ntests/test_producible_prior.py::test_producible_prior_with_synthetic_organs\ntests/test_producible_prior.py::test_producible_prior_with_synthetic_organs\n  <repo>/.venv/lib/python3.12/site-packages/sklearn/neural_network/_multilayer_perceptron.py:785: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (20) reached and the optimization hasn't converged yet.\n    warnings.warn(\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n69 passed, 1 skipped, 23 warnings in 1.31s\n",
+      "stderr": ""
+    },
+    {
+      "command": ".venv/bin/python -m aav9_sma demo --output-dir artifacts/demo-7",
+      "started_utc": "2026-09-29T03:58:06.834772+00:00",
+      "wall_seconds": 1.1817085419897921,
+      "exit_status": 0,
+      "stdout": "{\n  \"mode\": \"synthetic_smoke_test\",\n  \"random_state\": 42,\n  \"rows\": 64,\n  \"packaging_threshold\": 0.6787822617279131,\n  \"passed_packaging_gate\": 32,\n  \"outputs\": {\n    \"input\": \"artifacts/demo-7/demo_canonical.csv\",\n    \"audit\": \"artifacts/demo-7/demo_audit.json\",\n    \"predictions\": \"artifacts/demo-7/demo_predictions.csv\",\n    \"ranked\": \"artifacts/demo-7/demo_ranked_candidates.csv\"\n  },\n  \"warning\": \"Synthetic data only; never use demo outputs for biological claims.\"\n}\n",
+      "stderr": ""
+    }
+  ]
+}

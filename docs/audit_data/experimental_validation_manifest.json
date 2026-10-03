@@ -1,0 +1,15 @@
+{
+  "computational_candidates": 30,
+  "control_sha256": "4d101c33b3eb26bb9137baf91ff1a2fc24af4007a98e349da4aeefd8dd2095f7",
+  "control_source": "docs/audit_data/funnel_control_audit.csv",
+  "controls": 7,
+  "panel_rows": 37,
+  "schema_version": "1.0",
+  "shortlist_sha256": "3b499327a2a2ebb08f3a987fbd030c9e8d030cb8025bdbce03034c3606136210",
+  "shortlist_source": "docs/audit_data/virtual_screen_shortlist.csv",
+  "tier_counts": {
+    "Tier 1": 7,
+    "Tier 2": 1,
+    "Tier 3": 22
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "run_date": "2026-09-27",
+  "source_code_commit": "058459b51bc20ec9c1598145c39f9111be144c10",
+  "branch": "feat/producible-prior-sampling",
+  "parameters": {
+    "pool_size": 50000,
+    "resample_size": 5000,
+    "producible_rule": "point_median",
+    "random_state": 42,
+    "ensemble_size": 5,
+    "max_iter": 80
+  },
+  "runs": {
+    "packaging_only": {
+      "reconstructed_table_used": false
+    },
+    "with_organs": {
+      "reconstructed_table_used": true
+    }
+  },
+  "input_sha256": {
+    "fit4function_library_screens.csv": "29e509dc8a6c412c9b6d1ca90e537062273c1667b32973ff12b4ba92f6506351",
+    "fit4function_multiorgan_reconstructed.csv.gz": "311b3c29476402326d877ae913a75c51f4330cfeddfdd026e75dda1322677291",
+    "literature_public_7mers.csv": "7ab45460ee8995efaf3e712528510d3aa1cc7d2689cc97c823033c5d9ba2e435"
+  },
+  "output_sha256": {
+    "artifacts/producible_prior/ranked_packaging_only.csv": "e0ace61f5ac57abdc2d117f30995535202b07030d050790719b2be0b0bd302fa",
+    "artifacts/producible_prior/summary_packaging_only.json": "817c36b09e2fc01d2be51ff6e9229526355138615f5897d3979dbfcfde8f521a",
+    "artifacts/producible_prior/ranked_with_organs.csv.gz": "5a1d9592dc1cc759292f5caffa577bb54fcea88d56118c7315a18ac5ca0c5c64",
+    "artifacts/producible_prior/shortlist_scheme2.csv": "dae560db70c36a6c300f77bf91f5ac59fe026fc65657399a6b9764ae3e10eb63",
+    "artifacts/producible_prior/summary_with_organs.json": "4cd0a4318af6f01a0266c764552ac353004e45fe67542dc5e2578224fc874e6e",
+    "artifacts/literature_7mers/scores_packaging.csv": "32336046a0f01ff4549c758b1b41261207deb023e77349d7dd0b4bfcb4c676b7",
+    "artifacts/literature_7mers/summary_packaging.json": "0e6ad80bb15506b0083f1a797691bb7dc33b2d057a8d5ffd3806b33a0ba21795",
+    "artifacts/literature_7mers/scores_with_organs.csv": "95405a3abd70cbede1146ac50b00ceccc68c003189de1ceae02b6b56c1ca2c06",
+    "artifacts/literature_7mers/summary_with_organs.json": "cccfea37e936fdbe1a4cbf1df8f44080a9020b97481670b62ba9c660f14675dd"
+  },
+  "claim_boundary": "Sanity check and scheme-2 comparator only; these outputs do not replace the primary 95% LCB funnel or validate literature peptides experimentally."
+}

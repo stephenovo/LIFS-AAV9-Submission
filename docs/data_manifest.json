@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "description": "Actual existing input files verified during updated-7.0 audit; raw inputs not redistributed.",
+  "files": [
+    {
+      "path": "data/raw/fit4function_official/data/fit4function_library_screens.csv",
+      "sha256": "29e509dc8a6c412c9b6d1ca90e537062273c1667b32973ff12b4ba92f6506351"
+    },
+    {
+      "path": "data/processed/fit4function_multiorgan_reconstructed.csv.gz",
+      "sha256": "311b3c29476402326d877ae913a75c51f4330cfeddfdd026e75dda1322677291"
+    }
+  ]
+}
